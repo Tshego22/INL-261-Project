@@ -1,0 +1,69 @@
+document.addEventListener("DOMContentLoaded", () => {
+    const chatWidget = document.getElementById("career-chat-widget");
+    const toggleBtn = document.getElementById("chat-toggle-btn");
+    const closeBtn = document.getElementById("chat-close-btn");
+    const chatForm = document.getElementById("chat-input-form");
+    const userInput = document.getElementById("chat-user-input");
+    const messagesBox = document.getElementById("chat-messages-box");
+
+    const lecturerData = {
+        name: "Mr. John Doe", 
+        modules: "I lecture INL261 (Innovation & Leadership) and enterprise development systems! 🚀",
+        superpower: "My core superpower is transforming complex logic configurations into interactive human creations. ⚡",
+        advice: "The best advice I give all my students: 'Never push raw uncompiled build artifacts to production on a Friday afternoon!' 🤖",
+        fact: "Fun fact: I consume approximately three cups of espresso coffee before writing any codebase logic. ☕",
+        philosophy: "My teaching philosophy focuses on student accountability, real collaboration, and modern AI workflows. 🎓"
+    };
+
+    toggleBtn.addEventListener("click", () => {
+        chatWidget.classList.remove("chat-widget-closed");
+        chatWidget.classList.add("chat-widget-open");
+        userInput.focus();
+    });
+
+    closeBtn.addEventListener("click", () => {
+        chatWidget.classList.remove("chat-widget-open");
+        chatWidget.classList.add("chat-widget-closed");
+    });
+
+    chatForm.addEventListener("submit", (e) => {
+        e.preventDefault();
+        const rawText = userInput.value.trim();
+        if (!rawText) return;
+
+        appendMessage(rawText, "user-message");
+        userInput.value = "";
+
+        setTimeout(() => {
+            const botReply = generateSmartResponse(rawText.toLowerCase());
+            appendMessage(botReply, "bot-message");
+        }, 600); 
+    });
+
+    function appendMessage(text, className) {
+        const messageDiv = document.createElement("div");
+        messageDiv.classList.add("message", className);
+        messageDiv.innerHTML = `<p>${text}</p>`;
+        messagesBox.appendChild(messageDiv);
+        messagesBox.scrollTop = messagesBox.scrollHeight;
+    }
+
+    function generateSmartResponse(input) {
+        if (input.includes("module") || input.includes("teach") || input.includes("inl")) {
+            return lecturerData.modules;
+        } else if (input.includes("superpower") || input.includes("strength") || input.includes("power")) {
+            return lecturerData.superpower;
+        } else if (input.includes("advice") || input.includes("quote")) {
+            return lecturerData.advice;
+        } else if (input.includes("fact") || input.includes("funny")) {
+            return lecturerData.fact;
+        } else if (input.includes("philosophy") || input.includes("approach")) {
+            return lecturerData.philosophy;
+        } else if (input.includes("hello") || input.includes("hi") || input.includes("hey")) {
+            return `Hello! Ask me about my taught <b>modules</b>, my <b>superpower</b>, my career <b>advice</b>, or my design <b>philosophy</b>!`;
+        } else {
+            return `I'm not completely sure about that specific topic, but I'd love to chat about my <b>modules</b>, career <b>advice</b>, or my personal <b>superpower</b>! Try using those terms.`;
+        }
+    }
+});
+
