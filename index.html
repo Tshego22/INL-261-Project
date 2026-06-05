@@ -112,37 +112,111 @@
     <p class="section-label">// 02 — modules</p>
     <h2 class="section-title">What Mr Sadek <span>Teaches</span></h2>
   </div>
+
+  <!-- Legend -->
+  <div class="modules-legend">
+    <div class="legend-item"><span class="legend-dot dot-foundation"></span> Foundation</div>
+    <div class="legend-item"><span class="legend-dot dot-first"></span> 1st Year</div>
+    <div class="legend-item"><span class="legend-dot dot-second"></span> 2nd Year</div>
+  </div>
+
   <div class="modules-grid">
-    <div class="module-card reveal" style="transition-delay:0.05s">
-      <div class="module-code">PRL161</div>
-      <div class="module-name">Programming Preliminaries</div>
-      <div class="module-desc">Foundations of programming logic, syntax, and problem-solving for first-time coders.</div>
-      <span class="module-year">Foundation</span>
+
+    <div class="module-card foundation reveal" style="transition-delay:0.05s" onclick="this.classList.toggle('flipped')">
+      <div class="card-inner">
+        <div class="card-front">
+          <div class="module-code">PRL161</div>
+          <div class="module-name">Programming Preliminaries</div>
+          <div class="module-desc">Foundations of programming logic, syntax, and problem-solving for first-time coders.</div>
+          <span class="module-year badge-foundation">Foundation</span>
+          <span class="flip-hint">tap to flip ↺</span>
+        </div>
+        <div class="card-back">
+          <span class="back-icon">🎯</span>
+          <span class="back-label">You'll learn</span>
+          <span class="back-name">Logic · Syntax · Problem-solving</span>
+          <span class="module-year badge-foundation">Foundation</span>
+          <span class="back-code">PRL161</span>
+        </div>
+      </div>
     </div>
-    <div class="module-card reveal" style="transition-delay:0.1s">
-      <div class="module-code">PRG171</div>
-      <div class="module-name">Programming 1st Year (Sem 1)</div>
-      <div class="module-desc">Core programming concepts — variables, control flow, functions, and data structures.</div>
-      <span class="module-year">1st Year</span>
+
+    <div class="module-card first-year reveal" style="transition-delay:0.1s" onclick="this.classList.toggle('flipped')">
+      <div class="card-inner">
+        <div class="card-front">
+          <div class="module-code">PRG171</div>
+          <div class="module-name">Programming 1st Year (Sem 1)</div>
+          <div class="module-desc">Core programming concepts — variables, control flow, functions, and data structures.</div>
+          <span class="module-year badge-first">1st Year</span>
+          <span class="flip-hint">tap to flip ↺</span>
+        </div>
+        <div class="card-back">
+          <span class="back-icon">💻</span>
+          <span class="back-label">You'll learn</span>
+          <span class="back-name">Variables · Control Flow · Functions</span>
+          <span class="module-year badge-first">1st Year</span>
+          <span class="back-code">PRG171</span>
+        </div>
+      </div>
     </div>
-    <div class="module-card reveal" style="transition-delay:0.15s">
-      <div class="module-code">PRG181</div>
-      <div class="module-name">Programming 1st Year (Sem 2)</div>
-      <div class="module-desc">Advanced 1st-year topics including OOP principles and practical application development.</div>
-      <span class="module-year">1st Year</span>
+
+    <div class="module-card first-year reveal" style="transition-delay:0.15s" onclick="this.classList.toggle('flipped')">
+      <div class="card-inner">
+        <div class="card-front">
+          <div class="module-code">PRG181</div>
+          <div class="module-name">Programming 1st Year (Sem 2)</div>
+          <div class="module-desc">Advanced 1st-year topics including OOP principles and practical application development.</div>
+          <span class="module-year badge-first">1st Year</span>
+          <span class="flip-hint">tap to flip ↺</span>
+        </div>
+        <div class="card-back">
+          <span class="back-icon">🔧</span>
+          <span class="back-label">You'll learn</span>
+          <span class="back-name">OOP · App Development</span>
+          <span class="module-year badge-first">1st Year</span>
+          <span class="back-code">PRG181</span>
+        </div>
+      </div>
     </div>
-    <div class="module-card reveal" style="transition-delay:0.2s">
-      <div class="module-code">WPR271</div>
-      <div class="module-name">Web Programming (Sem 1)</div>
-      <div class="module-desc">Introduction to web development — HTML, CSS, and client-side scripting foundations.</div>
-      <span class="module-year">2nd Year</span>
+
+    <div class="module-card second-year reveal" style="transition-delay:0.2s" onclick="this.classList.toggle('flipped')">
+      <div class="card-inner">
+        <div class="card-front">
+          <div class="module-code">WPR271</div>
+          <div class="module-name">Web Programming (Sem 1)</div>
+          <div class="module-desc">Introduction to web development — HTML, CSS, and client-side scripting foundations.</div>
+          <span class="module-year badge-second">2nd Year</span>
+          <span class="flip-hint">tap to flip ↺</span>
+        </div>
+        <div class="card-back">
+          <span class="back-icon">🌐</span>
+          <span class="back-label">You'll learn</span>
+          <span class="back-name">HTML · CSS · Client-side Scripting</span>
+          <span class="module-year badge-second">2nd Year</span>
+          <span class="back-code">WPR271</span>
+        </div>
+      </div>
     </div>
-    <div class="module-card reveal" style="transition-delay:0.25s">
-      <div class="module-code">WPR281</div>
-      <div class="module-name">Web Programming (Sem 2)</div>
-      <div class="module-desc">Intermediate web programming including JavaScript, responsive design, and frameworks.</div>
-      <span class="module-year">2nd Year</span>
+
+    <div class="module-card second-year reveal" style="transition-delay:0.25s" onclick="this.classList.toggle('flipped')">
+      <div class="card-inner">
+        <div class="card-front">
+          <div class="module-code">WPR281</div>
+          <div class="module-name">Web Programming (Sem 2)</div>
+          <div class="module-desc">Intermediate web programming including JavaScript, responsive design, and frameworks.</div>
+          <span class="module-year badge-second">2nd Year</span>
+          <span class="flip-hint">tap to flip ↺</span>
+        </div>
+        <div class="card-back">
+          <span class="back-icon">⚡</span>
+          <span class="back-label">You'll learn</span>
+          <span class="back-name">JavaScript · Responsive Design · Frameworks</span>
+          <span class="module-year badge-second">2nd Year</span>
+          <span class="back-code">WPR281</span>
+        </div>
+      </div>
     </div>
+
   </div>
 </section>
 
